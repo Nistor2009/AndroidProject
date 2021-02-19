@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLayoutBackground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/event"
+        android:textSize="@dimen/LargeTextSize"
+        android:layout_marginStart="@dimen/startMargin"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="@dimen/topMargin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_description"
+            android:textSize="@dimen/MediumTextSize"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/endMargin"/>
+
+        <TextView
+            android:id="@+id/viewTextDescriptionInEditActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/SmallTextSize"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/endMargin"
+            android:maxLines = "10"
+            android:scrollbars="vertical"
+            android:paddingBottom="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_date"
+            android:textSize="@dimen/MediumTextSize"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/endMargin"/>
+
+        <TextView
+            android:id="@+id/viewTextEventDateInEditActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/SmallTextSize"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/endMargin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_time"
+            android:textSize="@dimen/MediumTextSize"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/endMargin"/>
+
+        <TextView
+            android:id="@+id/viewTextEventTimeInEditActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/SmallTextSize"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/endMargin"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/viewButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_event"
+        android:background="@drawable/my_button"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/topMargin"/>
+
+</LinearLayout>

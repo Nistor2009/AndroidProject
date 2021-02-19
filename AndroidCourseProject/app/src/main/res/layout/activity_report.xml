@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportActivity"
+    android:background="@color/colorLayoutBackground">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/viewReportToolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorToolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextClock
+        android:id="@+id/viewTextClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/viewReportToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="@dimen/topMargin"
+        android:gravity="center"
+        android:format12Hour="EE, MM.dd.yyyy hh:mm"
+        android:format24Hour="EE, MM.dd.yyyy HH:mm"
+        android:textSize="@dimen/LargeTextSize"
+        android:textColor="@color/colorBlack"/>
+
+
+    <TextView
+        android:id="@+id/viewEventList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/topMargin"
+        app:layout_constraintTop_toBottomOf="@+id/viewTextClock"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/viewRadioCheckUpdateList"
+        android:text="@string/to_do_list"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/MediumTextSize" />
+
+    <RadioGroup
+        android:id="@+id/viewRadioCheckUpdateList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/viewEventList"
+        app:layout_constraintLeft_toLeftOf="@+id/viewEventList"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RadioButton
+            android:id="@+id/viewRadioListForToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_do_list"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/viewRadioAllList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_event_list"/>
+
+        <RadioButton
+            android:id="@+id/viewRadioDailyEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daily_event"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/headline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/viewRadioCheckUpdateList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/startMargin"
+        android:layout_marginEnd="@dimen/endMargin"
+        android:background="@color/colorLayoutBackground"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
